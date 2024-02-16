@@ -74,13 +74,10 @@ function App() {
     if (horadeAlmoco < 60 * 60 * 1000) {
       setResultado(`Você fez ${interjornada} minutos de almoço, o mínimo é 1 hora, procure o setor de RH para mais informações`);
     }
-    /*else if (horadeAlmoco === almocoNegativo) {
-        setResultado(`Você fez ${interjornada} de almoço, viajante do tempo `)
-    }*/
     else if (diferenca > (7 * 60 * 60 * 1000 + 20 * 60 * 1000) && horaExtra > 0) {
       setResultado(`Você trabalhou ${tempoTrabalhado}, e isso gerou ${horaExtra} horas e ${minutoExtra} minutos extras.`);
     }
-    else if (diferenca > (7 * 60 * 60 * 1000 + 20 * 60 * 1000) && horaExtra < 0 && minutoExtra > 0) {
+    else if (diferenca > (7 * 60 * 60 * 1000 + 20 * 60 * 1000) && minutoExtra > 0) {
       setResultado(`Você trabalhou ${tempoTrabalhado}, e isso gerou ${minutoExtra} minutos extras.`);
 
     }
