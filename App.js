@@ -61,8 +61,10 @@ function App() {
     const horaExtra = Math.max(horas - 7, 0);
     const minutoExtra = Math.max(minutos - 20, 0);
 
-    const horaFalta = -Math.max(horas - 7);
-    const minutosFalta = -Math.max(minutos - 20);
+    const totalMinutosTrabalhadosEmMinutos = horas * 60 + minutos;
+    const horaFalta = Math.floor((7 * 60 + 20 - totalMinutosTrabalhadosEmMinutos) / 60);
+    const minutosFalta = (7 * 60 + 20 - totalMinutosTrabalhadosEmMinutos) % 60;
+
 
     const horadeAlmoco = retornoAlmocoTime - saidaAlmocoTime
     const interjornada = Math.floor(horadeAlmoco / (60 * 1000))
