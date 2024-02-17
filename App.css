@@ -84,3 +84,30 @@ p {
   width: 200px;
   height: auto;
 }
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 90%;
+    margin: 50px auto;
+  }
+
+  input {
+    width: calc(100% - 20px);
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .Logos img {
+    width: 150px;
+  }
+}

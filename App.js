@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
-import './App.css'; // Certifique-se de que o arquivo CSS esteja na mesma pasta que o componente App.js
-
+import './App.css';
 function App() {
   const [resultado, setResultado] = useState('');
   const entradaRef = useRef(null);
@@ -18,6 +17,7 @@ function App() {
       alert('Digite valores válidos em todos os campos.');
       return;
     }
+
 
     const converterParaData = (tempo) => {
       const digitosApenas = /^\d+$/;
@@ -81,7 +81,6 @@ function App() {
     }
     else if (diferenca > (7 * 60 * 60 * 1000 + 20 * 60 * 1000) && minutoExtra > 0) {
       setResultado(`Você trabalhou ${tempoTrabalhado}, e isso gerou ${minutoExtra} minutos extras.`);
-
     }
     else if (diferenca < (7 * 60 * 60 * 1000 + 20 * 60 * 1000) && horaFalta > 0) {
       setResultado(`Você trabalhou ${tempoTrabalhado}, faltam ${horaFalta} horas e ${minutosFalta} minutos para cumprir a carga horária.`);
@@ -92,13 +91,10 @@ function App() {
     else if (diferenca < (7 * 60 * 60 * 1000 + 20 * 60 * 1000) && horaFalta === 0 && minutosFalta === 1) {
       setResultado(`Você trabalhou ${tempoTrabalhado}, falta apenas 1 minuto `)
     }
-
-
     else {
       setResultado('A carga horária foi cumprida regularmente.');
     }
   };
-
   return (
     <div>
       <div className="Logos">
