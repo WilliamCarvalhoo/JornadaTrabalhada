@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom right, #4a15dd, #1d9213);
+  background: linear-gradient(to bottom right, rgb(19, 56, 128), rgb(119, 183, 42));
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -12,7 +12,7 @@ body {
 .container {
   max-width: 400px;
   margin: 50px auto;
-  padding: 30px;
+  padding: 10px;
   background-color: #ffffffe6;
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -53,25 +53,17 @@ p {
 .Logos {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .Logos img {
-  width: 100px;
+  width: 150px;
   height: auto;
 }
 
 .resultado {
-  animation: moveToLeft 2s ease-in-out;
-  animation-delay: 1000ms;
-}
-
-@keyframes moveToLeft {
-  from {
-    transform: translateX(0px);
-  }
-
-  to {
-    transform: translateY(300px);
-  }
+  color: #000000;
+  font-size: 24px;
+  padding-top: 10px;
+  transition: 0.3 linear;
 }
