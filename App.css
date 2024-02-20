@@ -1,39 +1,44 @@
-.App {
-  text-align: center;
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom right, #4a15dd, #1d9213);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 
 .container {
   max-width: 400px;
   margin: 50px auto;
-  padding: 20px;
-  background-color: #00cf34;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  background-color: #ffffffe6;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
 input {
-  width: calc(100% - 20px);
+  width: 300px;
   margin: 10px 0;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 15px;
+  border: none;
+  border-radius: 25px;
+  background-color: #f0f0f0;
+  border: solid black 1px;
 }
 
 button {
-  padding: 10px 20px;
+  width: 100%;
+  padding: 15px;
   background-color: #0c007a;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 25px;
   cursor: pointer;
-  transition: background-color 0.5s;
+  transition: 0.3s linear;
+
 }
 
 button:hover {
@@ -48,9 +53,25 @@ p {
 .Logos {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 30px;
 }
 
 .Logos img {
-  width: 200px;
+  width: 100px;
   height: auto;
+}
+
+.resultado {
+  animation: moveToLeft 2s ease-in-out;
+  animation-delay: 1000ms;
+}
+
+@keyframes moveToLeft {
+  from {
+    transform: translateX(0px);
+  }
+
+  to {
+    transform: translateY(300px);
+  }
 }

@@ -108,7 +108,7 @@ function App() {
         <input type="text" id="retornoAlmoco" ref={retornoAlmocoRef} placeholder="Retorno Almoço" />
         <input type="text" id="saida" ref={saidaRef} placeholder="Saída" />
         <button onClick={calcularCargaHoraria}>Calcular</button>
-        <p>{resultado}</p>
+        <p className="resultado">{resultado}</p>
       </div>
     </div>
   );
